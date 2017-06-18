@@ -16,10 +16,10 @@ Getting Started
     $denarius = new Denarius('username','password');
     ```
 
-    Optionally, you can specify a host, port. Default is HTTP on localhost port 8332.
+    Optionally, you can specify a host, port. Default is HTTP on localhost port 32339 (RPC Port).
 
     ```php
-    $denarius = new Denarius('username','password','localhost','8332');
+    $denarius = new Denarius('username','password','localhost','32339');
     ```
 
     If you wish to make an SSL connection you can set an optional CA certificate or leave blank
@@ -36,6 +36,14 @@ Getting Started
     
     $denarius->getblock('000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f');
     ```
+4. Setup your denarius.conf file with the following to be able to accept RPC requests
+
+	```php
+	server=1
+	rpcuser=yourusername
+	rpcpassword=yourpassword
+	rpcallowip=yourserverip
+	```
 
 Additional Info
 ---------------
